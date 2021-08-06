@@ -4,7 +4,23 @@ import tshirtImage from '../../assets/tshirt.png';
 import ProductAction from '../ProductAction';
 import SellerInfo from '../SellerInfo';
 
-import { Container, Row, Panel, Column, Gallery, Section, Description } from './styles';
+import {
+  Container,
+  Row,
+  Panel,
+  Column,
+  Gallery,
+  Section,
+  Description,
+  Others,
+  Slide,
+  OtherProducts,
+  PriceCard,
+  PriceRow,
+  InstallmentsInfo,
+  CheckIcon,
+  Details,
+  ItemDescription } from './styles';
 
 const Product: React.FC = () => {
   return(
@@ -57,32 +73,89 @@ const WarrantySection = () => (
 )
 
 const Info = () => (
-  <Description>
-    <h2>Descrição</h2>
+  <>
+    <Others>
+      <h2>Quem viu também comprou</h2>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque eaque, cum a
-      lias, ex, consequuntur soluta est placeat modi consectetur iusto aliquid iure ipsum quos
-       ab voluptate libero doloremque laudantium?
+      <Slide>
+        <OtherProducts>
+          <img src={tshirtImage} alt="tshirt" ></img>
 
-       <br />
-       <br />
-        Itens inclusos: <br />
-        - 1x LED <br />
-        - 1x LED <br />
-        - 1x LED <br />
-        - 1x LED <br />
-        - 1x LED <br />
-        <br />
+          <PriceCard>
+            <PriceRow>
+              <span className="symbol" >R$</span>
+              <span className="fraction" >39</span>
+              <span className="cents" >99</span>
+              <span className="discount" >12% OFF</span>
+            </PriceRow>
 
+            <InstallmentsInfo>em 3x de R$ 11,67</InstallmentsInfo>
+
+            <Details>
+              <span>Frete Grátis</span>
+              <CheckIcon />
+            </Details>
+
+            <ItemDescription>
+              <p>Camiseta branca basica comum</p>
+            </ItemDescription>
+          </PriceCard>
+        </OtherProducts>
+        <OtherProducts>
+          <img src={tshirtImage} alt="tshirt" ></img>
+
+          <PriceCard>
+            <PriceRow>
+              <span className="symbol" >R$</span>
+              <span className="fraction" >39</span>
+              <span className="cents" >99</span>
+              <span className="discount" >12% OFF</span>
+            </PriceRow>
+
+            <InstallmentsInfo>em 3x de R$ 11,67</InstallmentsInfo>
+
+            <Details>
+              <span>Frete Grátis</span>
+              <CheckIcon />
+            </Details>
+
+            <ItemDescription>
+              <p>Camiseta branca basica comum</p>
+            </ItemDescription>
+          </PriceCard>
+        </OtherProducts>
+
+
+      </Slide>
+    </Others>
+
+    <Description>
+      <h2>Descrição</h2>
+
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque eaque, cum a
-      lias, ex, consequuntur soluta est placeat modi consectetur iusto aliquid iure ipsum quos
-       ab voluptate libero doloremque laudantium?
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque eaque, cum a
-      lias, ex, consequuntur soluta est placeat modi consectetur iusto aliquid iure ipsum quos
-       ab voluptate libero doloremque laudantium?
-    </p>
-  </Description>
+        lias, ex, consequuntur soluta est placeat modi consectetur iusto aliquid iure ipsum quos
+        ab voluptate libero doloremque laudantium?
+
+        <br />
+        <br />
+          Itens inclusos: <br />
+          - 1x LED <br />
+          - 1x LED <br />
+          - 1x LED <br />
+          - 1x LED <br />
+          - 1x LED <br />
+          <br />
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque eaque, cum a
+        lias, ex, consequuntur soluta est placeat modi consectetur iusto aliquid iure ipsum quos
+        ab voluptate libero doloremque laudantium?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur atque eaque, cum a
+        lias, ex, consequuntur soluta est placeat modi consectetur iusto aliquid iure ipsum quos
+        ab voluptate libero doloremque laudantium?
+      </p>
+    </Description>
+  </>
 )
 
 export default Product;
